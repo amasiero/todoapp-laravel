@@ -2,17 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/tarefas', function () {
 
-Route::get('/', function () {
-    return view('welcome');
+    $tarefas = [
+        'Estudar Laravel',
+        'Assistir Friends',
+        'Ir ao mercado',
+        'Inscrever no canal do Andrey',
+        'Acompanhar os videos postados',
+        'Tirar 10 na PS'
+    ];
+
+    echo '<h2>Tarefas para fazer</h2>';
+    echo '<ul>';
+    foreach($tarefas as $tarefa) {
+        echo "<li>$tarefa</li>";
+    } 
+    echo '</ul>';
 });
