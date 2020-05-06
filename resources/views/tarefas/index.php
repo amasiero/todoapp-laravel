@@ -15,6 +15,14 @@
     </a>
   </nav>
   <div class="container">
+    <h2 class="mt-4">Incluir Nova Tarefa</h2>
+    <form class="form-inline row" method="post">
+      <div class="form-group col-8 mb-2 mr-4">
+        <input type="text" class="form-control col-12" id="tarefa" placeholder="Informe a descrição da sua tarefa">
+      </div>
+      <button type="submit" class="btn btn-dark col-2 mb-2">Adicionar</button>
+    </form>
+    <hr />
     <h2 class="mt-4">Tarefas para fazer</h2>
     <table class="table">
       <thead>
