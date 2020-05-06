@@ -19,7 +19,7 @@
       <tbody>
         @foreach($tarefas as $tarefa)
         <tr>
-          <td>{{ $tarefa }}</td>
+          <td>{{ $tarefa->descricao }}</td>
           <td>
             <a href="#" class="btn btn-success">
               <i class="fas fa-check"></i>
