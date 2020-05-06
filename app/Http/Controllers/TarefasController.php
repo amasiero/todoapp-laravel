@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 class TarefasController
 {
-  public function listaTarefas() 
+  public function index() 
   {
     $tarefas = [
         'Estudar Laravel',
@@ -15,13 +15,6 @@ class TarefasController
         'Tirar 10 na PS'
     ];
 
-    $html = '<h2>Tarefas para fazer</h2>';
-    $html .= '<ul>';
-    foreach($tarefas as $tarefa) {
-        $html .= "<li>$tarefa</li>";
-    } 
-    $html .= '</ul>';
-
-    return $html;
+    return view('tarefas.index', compact('tarefas'));
   }
 }
